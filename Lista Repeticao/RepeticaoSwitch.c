@@ -13,7 +13,7 @@ int main(){
     switch(opcao){
 
         case 1:
-            for (int i = 11; i < n1; i+=2){
+            for (int i = 1; i < n1; i+=2){
 
                 printf("%d\n", i);
         
@@ -21,7 +21,7 @@ int main(){
          break;
 
          case 2:
-            for (int i = 12; i < n1; i+=2){
+            for (int i = 0; i < n1; i+=2){
 
                 printf("%d\n", i);
 
