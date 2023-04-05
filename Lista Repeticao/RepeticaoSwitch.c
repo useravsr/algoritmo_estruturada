@@ -2,30 +2,17 @@
 int main(){
 
     int n1;
-    int opcao;
+    int n2;
+    int n3 = 9 ; 
 
-    printf("Insira um numero:");
-    scanf("%d", &n1);
+    printf("Insira um intervalo:");
+    scanf("%d %d", &n1, &n2);
 
-    printf("Escolha impar ou par:\n1-Impar\n2-Par\n>");
-    scanf("%d", &opcao);
+    for(int i = n1; i<n2 ; i++){
 
-    switch(opcao){
-
-        case 1:
-            for (int i = 1; i < n1; i+=2){
-
-                printf("%d\n", i);
-        
-            }
-         break;
-
-         case 2:
-            for (int i = 0; i < n1; i+=2){
-
-                printf("%d\n", i);
-
-            }
+        n3+=2;
+        if(n3 > n2) break;
+        printf("%d\n", n3);
 
     }
 
