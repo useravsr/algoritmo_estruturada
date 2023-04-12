@@ -21,11 +21,15 @@ int celsius(valor){
    float resultado = (9*valor/5) + 32;
    printf("%f", resultado);
 
+   return 0;
+
 }
 
 int fahrenheit(valor){
 
     float resultado = (valor-32)*5/9;
     printf("%f", resultado);
+
+    return 0;
 
 }
