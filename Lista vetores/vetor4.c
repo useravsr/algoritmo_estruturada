@@ -2,22 +2,34 @@
 #include<stdlib.h>
 int main(){
 
-    int vetor[6];
+    int vetor[80];
     int entrada = 0; 
     int contador = 0; 
-    int posicao[6];
+    int quantidade = 0;
+    int posicao[80];
+    int opcao = 0;
     
-    for(int i=0; i<6; i++){
 
-        vetor[i] = rand() % 100;
-        printf("%d\n", vetor[i]);
+    do{
 
-    }   
+        printf("Insira um numero para o array:");
+        scanf("%d", &vetor[quantidade]);
 
-    printf("Insira um numero:");
+        system("cls");
+
+        printf("Deseja inserir mais algum numero?\n1 - Sim\n0 - Nao\n>");
+        scanf("%d", &opcao);
+
+        quantidade++;
+
+    }while(opcao != 1 || contador > 80); 
+
+
+
+    printf("Testar numero:");
     scanf("%d", &entrada);
 
-    for(int i = 0; i < 6; i++){
+    for(int i = 0; i < quantidade; i++){
 
         if(entrada == vetor[i]){
 
