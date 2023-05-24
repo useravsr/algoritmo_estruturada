@@ -18,7 +18,6 @@ double usuariosAlturas[MAX_USERS];
 int usuariosVacinas[MAX_USERS];
 
 
-// Função para fazer a restauração dos dados a partir do backup
 void fazerRestauracao() {
     int totalUsuariosBackup;
     int usuariosIdsBackup[MAX_USERS];
@@ -43,7 +42,6 @@ void fazerRestauracao() {
     printf("Restauração realizada com sucesso!\n");
 }
 
-// Função para fazer o backup dos usuários cadastrados
 void fazerBackup() {
     int totalUsuariosBackup = totalUsuarios;
     int usuariosIdsBackup[MAX_USERS];
@@ -68,7 +66,6 @@ void fazerBackup() {
     printf("Backup realizado com sucesso!\n");
 }
 
-// Função para imprimir todos os usuários cadastrados
 void imprimirUsuarios() {
     printf("Usuários cadastrados:\n");
     for (int i = 0; i < totalUsuarios; i++) {
@@ -83,7 +80,6 @@ void imprimirUsuarios() {
     }
 }
 
-// Função para buscar um usuário pelo email
 void buscarUsuarioPorEmail() {
     char emailBusca[100];
     printf("Digite o email do usuário que deseja buscar: ");
@@ -115,7 +111,6 @@ void buscarUsuarioPorEmail() {
     }
 }
 
-// Função para excluir um usuário pelo email
 void excluirUsuarioPorEmail() {
     char emailExclusao[100];
     printf("\n\nDigite o email do usuario que deseja excluir: ");
@@ -151,7 +146,6 @@ void excluirUsuarioPorEmail() {
     }
 }
 
-// Função para editar um usuário pelo email
 void editarUsuarioPorEmail() {
     char emailEdicao[100];
     printf("Digite o email do usuario que deseja editar: ");
@@ -217,7 +211,6 @@ void editarUsuarioPorEmail() {
     }
 }
 
-// Função para adicionar um novo usuário
 void adicionarUsuario() {
     if (totalUsuarios == MAX_USERS) {
         printf("O numero maximo de usuarios foi atingido.\n");
@@ -271,40 +264,36 @@ void adicionarUsuario() {
 
     printf("Altura (em metros): ");
     scanf("%lf", &usuariosAlturas[totalUsuarios]);
-    while (getchar() != '\n'); // Limpar o buffer do teclado
+    while (getchar() != '\n'); 
 
     while (!validarAltura(usuariosAlturas[totalUsuarios])) {
         printf("Altura invalida. Digite novamente: ");
         scanf("%lf", &usuariosAlturas[totalUsuarios]);
-        while (getchar() != '\n'); // Limpar o buffer do teclado
+        while (getchar() != '\n'); 
     }
 
     printf("Numero de doses da vacina: ");
     scanf("%d", &usuariosVacinas[totalUsuarios]);
-    while (getchar() != '\n'); // Limpar o buffer do teclado
+    while (getchar() != '\n'); 
 
     totalUsuarios++;
 
     printf("Usuario adicionado com sucesso!\n");
 }
 
-// Função para gerar um número randômico para o ID
 int gerarId() {
     return rand() % 10000 + 1;
 }
 
-// Função para verificar se o email contém o caractere "@"
 int validarEmail(char *email) {
     char *ptr = strchr(email, '@');
     return ptr != NULL;
 }
 
-// Função para verificar se o sexo é válido
 int validarSexo(char *sexo) {
     return strcmp(sexo, "Feminino") == 0 || strcmp(sexo, "Masculino") == 0 || strcmp(sexo, "Indiferente") == 0;
 }
 
-// Função para verificar se a altura é válida
 int validarAltura(double altura) {
     return altura >= 1.0 && altura <= 2.0;
 }
@@ -327,7 +316,7 @@ int main() {
         printf("Opcao: ");
         scanf(" %c", &opcao);
         
-        getchar(); // Limpar o buffer do teclado
+       getchar();
         
         switch (opcao) {
             case '1':
