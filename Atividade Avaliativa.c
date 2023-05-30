@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 #define MAX_USERS 1000
 #define MAX_NAME_LENGTH 50
@@ -300,7 +299,7 @@ int validarAltura(double altura) {
 
 
 int main() {
-    srand(time(NULL));
+
     char opcao;
     
     do {
