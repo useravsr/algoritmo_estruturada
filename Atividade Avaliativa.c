@@ -284,12 +284,12 @@ int gerarId() {
     return rand() % 10000 + 1;
 }
 
-int validarEmail(char *email) {
-    char *ptr = strchr(email, '@');
+int validarEmail(char email) {
+    char ptr = strchr(email, '@');
     return ptr != NULL;
 }
 
-int validarSexo(char *sexo) {
+int validarSexo(char sexo) {
     return strcmp(sexo, "Feminino") == 0 || strcmp(sexo, "Masculino") == 0 || strcmp(sexo, "Indiferente") == 0;
 }
 
