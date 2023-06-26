@@ -1,0 +1,12 @@
+void fazerRestauracao();
+void fazerBackup();
+void imprimirUsuarios();
+void buscarUsuarioPorEmail();
+void excluirUsuarioPorEmail();
+void editarUsuarioPorEmail();
+void adicionarUsuario();
+int gerarId();
+int validarEmail(char *email);
+int validarSexo(char *sexo);
+int validarAltura(double altura);
+void menu(char *opcao);
