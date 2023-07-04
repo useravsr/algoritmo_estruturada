@@ -39,16 +39,7 @@ void alocarMemoria(Usuario* usuario, int tamanho) {
     }
 }
 
-void menu(char* opcao) {
-    printf("Selecione uma opcao:\n\n");
-    printf("1- Inserir usuario.\n");
-    printf("2- Editar usuarios.\n");
-    printf("3- Excluir usuario.\n");
-    printf("4- Listar usuarios cadastrados.\n");
-    printf("5- Sair.\n>");
-    scanf(" %c", opcao);
-    getchar();
-}
+
 
 void imprimirUsuarios(Usuario* usuario) {
     for (int i = 0; i < usuario->totalUsuarios; i++) {

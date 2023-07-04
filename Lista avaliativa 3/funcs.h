@@ -17,13 +17,23 @@ typedef struct {
 
 void liberarMemoria(Usuario* usuario);
 void alocarMemoria(Usuario* usuario, int tamanho);
-void menu(char* opcao);
 void imprimirUsuarios(Usuario* usuario);
 void apagarUsuario(Usuario* usuario);
 void editarUsuario(Usuario* usuario);
 void adicionarUsuario(Usuario* usuario);
 
 #endif
+
+void menu(char* opcao) {
+    printf("Selecione uma opcao:\n\n");
+    printf("1- Inserir usuario.\n");
+    printf("2- Editar usuarios.\n");
+    printf("3- Excluir usuario.\n");
+    printf("4- Listar usuarios cadastrados.\n");
+    printf("5- Sair.\n>");
+    scanf(" %c", opcao);
+    getchar();
+}
 
 int validarAltura(double altura) {
     return altura >= 1.0 && altura <= 2.0;
