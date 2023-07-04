@@ -1,29 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "funcs.h"
 
-typedef struct {
-    int totalUsuarios;
-    char** usuariosNomes;
-    char** usuariosEmails;
-    char** usuariosSexos;
-    char** usuariosEnderecos;
-    double* usuariosAlturas;
-    int* usuariosVacinas;
-} Usuario;
-
-int validarAltura(double altura) {
-    return altura >= 1.0 && altura <= 2.0;
-}
-
-int validarEmail(char* email) {
-    char* ptr = strchr(email, '@');
-    return ptr != NULL;
-}
-
-int validarSexo(char* sexo) {
-    return strcmp(sexo, "Feminino") == 0 || strcmp(sexo, "Masculino") == 0 || strcmp(sexo, "Indiferente") == 0;
-}
 
 void liberarMemoria(Usuario* usuario){
 
@@ -78,7 +57,7 @@ void imprimirUsuarios(Usuario* usuario) {
         printf("%s\n", usuario->usuariosEmails[i]);
         printf("%s\n", usuario->usuariosSexos[i]);
         printf("%s\n", usuario->usuariosEnderecos[i]);
-        printf("%lf\n", usuario->usuariosAlturas[i]);
+        printf("%.2lf\n", usuario->usuariosAlturas[i]);
         printf("%d\n", usuario->usuariosVacinas[i]);
     }
 }
